@@ -1,0 +1,2 @@
+insert into user (id, user_name, password, active, roles) values (1, 'foo', 'foo', true, 'ROLE_USER');
+insert into user (id, user_name, password, active, roles) values (2, 'admin', 'admin', true, 'ROLE_ADMIN');
