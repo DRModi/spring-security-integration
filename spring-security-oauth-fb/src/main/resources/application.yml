@@ -1,0 +1,29 @@
+security:
+  oauth2:
+    client:
+      clientId: #Create your own app by going to github -> setting -> Application -> Developer App,
+      clientSecret: #resgister or create new app if it is first time.
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://api.github.com/user
+
+#***************************
+ #APPLICATION FAILED TO START
+ #***************************
+ #
+ #Description:
+ #
+ #The bean 'scopedTarget.oauth2ClientContext', defined in class path resource [org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration.class], could not be registered. A bean with that name has already been defined in org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientContextConfiguration and overriding is disabled.
+ #
+ #Action:
+ #
+ #Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=t
+
+Spring:
+  main:
+    allow-bean-definition-overriding: true
+
